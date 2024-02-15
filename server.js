@@ -58,7 +58,7 @@ const serverless = require('serverless-http')
 
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 const app = express();
-const PORT = 3000; // Puedes elegir el puerto que prefieras
+const PORT = 10000; // Puedes elegir el puerto que prefieras
 
 // Permitir solicitudes de cualquier origen (CORS)
 app.use((req, res, next) => {
