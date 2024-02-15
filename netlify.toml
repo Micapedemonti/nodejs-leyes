@@ -1,2 +1,3 @@
 [build]
-fuctions = "fuctions"
+command = "npm run start" # Cambia el comando según sea necesario
+publish = "public"   

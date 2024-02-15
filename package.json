@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo 'Este es un script de construcción'"
+    "build": "mkdir -p build && cp -r public/* build/"
+
   },
   "author": "",
   "license": "ISC",
