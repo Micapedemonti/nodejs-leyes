@@ -15,8 +15,6 @@ app.use(express.static('public')); // Sirve archivos estáticos desde la carpeta
 app.get('/proxy', async (req, res) => {
     const searchTerm = req.query.cadena;
     const url = `https://www.leychile.cl/Consulta/obtxml?opt=61&cadena=${encodeURIComponent(searchTerm)}&cantidad=5`;
-    // const url = `https://leyesnode.onrender.com/proxy?cadena=${encodeURIComponent(searchTerm)}`;
-
     try {
         const response = await fetch(url);
         const data = await response.text();
