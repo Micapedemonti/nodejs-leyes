@@ -17,7 +17,7 @@
         document.getElementById('searchForm').addEventListener('submit', function(e) {
             e.preventDefault(); // Evitar el envío del formulario de manera tradicional
             var searchTerm = document.getElementById('searchTerm').value;
-            var url = `http://localhost:10000/proxy?cadena=${encodeURIComponent(searchTerm)}`;
+            var url = `https://leyesnode.onrender.com/proxy?cadena=${encodeURIComponent(searchTerm)}`;
 
             fetch(url)
                 .then(response => response.text())
@@ -49,7 +49,7 @@
         });
 
         function accederAlDocumento(idNorma) {
-            const url = `http://localhost:10000/contenidoNorma?idNorma=${idNorma}`;
+            const url = `https://leyesnode.onrender.com/contenidoNorma?idNorma=${idNorma}`;
 
             fetch(url)
                 .then(response => response.text())
