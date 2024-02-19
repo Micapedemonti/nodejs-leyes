@@ -6,11 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "mkdir -p build && cp -r public/* build/"
+    
 
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.4",
     "express": "^4.18.2",
     "netlify-cli": "^17.16.2",
     "node-fetch": "^3.3.2",

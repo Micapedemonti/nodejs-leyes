@@ -1,0 +1,21 @@
+.btn-bot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    cursor: pointer;
+    padding: 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+.btn-bot :hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3), 0 8px 24px 0 rgba(0, 0, 0, 0.22); /* Sombra más intensa al pasar el mouse */
+
+}
