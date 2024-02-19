@@ -2,7 +2,7 @@ let contenidoNormaActual = "";
 document.getElementById('searchForm').addEventListener('submit', function(e) {
     e.preventDefault(); // Evitar el envío del formulario de manera tradicional
     var searchTerm = document.getElementById('searchTerm').value;
-    var url = `http://localhost:3000/proxy?cadena=${encodeURIComponent(searchTerm)}`;
+    var url = `http://localhost:10000/proxy?cadena=${encodeURIComponent(searchTerm)}`;
 
     fetch(url)
         .then(response => response.text())
@@ -34,7 +34,7 @@ document.getElementById('searchForm').addEventListener('submit', function(e) {
 });
 
 function accederAlDocumento(idNorma,tituloNorma) {
-    const url = `http://localhost:3000/contenidoNorma?idNorma=${idNorma}`;
+    const url = `http://localhost:10000/contenidoNorma?idNorma=${idNorma}`;
 
     fetch(url)
         .then(response => response.text())
@@ -76,7 +76,6 @@ function accederAlDocumento(idNorma,tituloNorma) {
       
             
             html += `</div>`;
-            // html += `<button onclick="crearChatbot('${tituloNormaTexto.replace(/'/g, "\\'")}', '${idNorma}', ${contenidoNormaActual})">Crear Chatbot para esta Norma</button>`; // Usa tituloNormaTexto
             html += `<button   class ="btn-bot" onclick="crearChatbot('${idNorma}')">Bot</button>`; // Usa tituloNormaTexto
 
             console.log("Contenido de la norma:", contenidoNormaActual);
@@ -88,7 +87,7 @@ function accederAlDocumento(idNorma,tituloNorma) {
         .catch(error => console.error('Error al obtener el documento:', error));
 }
 
-
+//Crear chatbot
 async function crearChatbot(idNorma) {
 
         try {
@@ -123,7 +122,7 @@ async function crearChatbot(idNorma) {
     }
 
 
-
+//Actualizar chatbot
 
 async function actualizarConfiguracionChatbot(chatbotId,contenidoNormaActual,idNorma) {
     const options = {
